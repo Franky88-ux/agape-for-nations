@@ -16,7 +16,7 @@ function writeDB(data) {
 
 const app = express();
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 // ---------- Public settings (numéro WhatsApp, email) ----------
 app.get("/api/settings", (req, res) => {
@@ -147,7 +147,7 @@ app.post("/api/admin/settings", requireAdmin, (req, res) => {
   res.json({ ok: true, settings: db.settings });
 });
 
-const PORT = 4100;
+const PORT = process.env.PORT || 4100;
 app.listen(PORT, () => {
   console.log(`AGAPE FOR NATIONS — serveur en écoute sur http://localhost:${PORT}`);
   console.log(`Mot de passe admin par défaut : ${readDB().settings.adminPassword}`);
