@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace admin — AGAPE FOR NATIONS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a href="index.html" class="logo"><img src="logo.jpeg" class="logo-img" alt="Logo"></a>
+    <div class="navlinks"><span class="eyebrow">Espace administrateur</span></div>
+    <a href="index.html" class="nav-cta">Retour au site</a>
+  </nav>
+</header>
+
+<div id="login-view" class="admin-login">
+  <span class="eyebrow">Connexion admin</span>
+  <h2 style="margin:12px 0 24px;">Se connecter</h2>
+  <form id="login-form">
+    <div>
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer;">Se connecter</button>
+    <p id="login-error" style="color:var(--red-bright); font-size:0.85rem;"></p>
+  </form>
+</div>
+
+<div id="dash-view" style="display:none;">
+  <section style="padding:50px 0 20px;">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:10px;">
+        <div>
+          <span class="eyebrow">Tableau de bord</span>
+          <h2>Toutes les demandes</h2>
+        </div>
+        <button id="logout-btn" class="small-btn">Se déconnecter</button>
+      </div>
+      <div class="admin-tabs">
+        <div class="admin-tab active" data-tab="partners">Demandes de partenariat</div>
+        <div class="admin-tab" data-tab="supports">Demandes de soutien</div>
+      </div>
+      <div id="table-container"></div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--line); padding-top:50px;">
+    <div class="wrap">
+      <span class="eyebrow">Réglages</span>
+      <h2 style="margin:10px 0 24px;">Numéro WhatsApp & email de contact</h2>
+      <form id="settings-form" style="max-width:480px;">
+        <div>
+          <label for="set-whatsapp">Numéro WhatsApp (format international, sans + ni espaces — ex: 229196258729)</label>
+          <input type="text" id="set-whatsapp" placeholder="229196258729">
+        </div>
+        <div>
+          <label for="set-email">Email de contact</label>
+          <input type="email" id="set-email" placeholder="contact@agapefornation.org">
+        </div>
+        <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer; justify-self:start;">Enregistrer les réglages</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

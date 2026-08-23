@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soutenir — AGAPE FOR NATIONS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a href="index.html" class="logo"><img src="logo.jpeg" class="logo-img" alt="AGAPE FOR NATIONS"></a>
+    <div class="navlinks">
+      <a href="index.html">Accueil</a>
+      <a href="visions.html">Nos visions</a>
+      <a href="missions.html">Nos missions</a>
+      <a href="actions.html">Nos actions</a>
+      <a href="partenaires.html">Partenaires</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="soutenir.html" class="nav-cta">Soutenir</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Votre soutien change une trajectoire</span>
+    <h1>Soutenir un enfant,<br>ouvrir un chemin.</h1>
+    <p style="margin-top:18px;">Chaque don, chaque heure de bénévolat, chaque prière rapproche un enfant de la rue d'une vie stable et d'une foi vivante.</p>
+    <div class="verse">
+      <p>« Donnez, et il vous sera donné : on versera dans votre sein une bonne mesure. »</p>
+      <cite>Luc 6:38</cite>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Faire une demande de soutien</span>
+        <h2>Choisissez votre façon d'aider</h2>
+      </div>
+    </div>
+
+    <form id="support-form" style="max-width:640px;">
+      <div>
+        <label for="s-nom">Nom</label>
+        <input type="text" id="s-nom" name="nom" required>
+      </div>
+      <div>
+        <label for="s-prenom">Prénom</label>
+        <input type="text" id="s-prenom" name="prenom" required>
+      </div>
+      <div>
+        <label for="s-numero">Numéro de téléphone</label>
+        <input type="tel" id="s-numero" name="numero" required>
+      </div>
+      <div>
+        <label>Type de soutien</label>
+        <div class="choice-group">
+          <label class="choice">
+            <input type="radio" name="type" value="Alimentaire">
+            <span><strong>Alimentaire</strong><span class="desc">Don de vivres ou repas pour les enfants accompagnés.</span></span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="type" value="Vêtement">
+            <span><strong>Vêtement</strong><span class="desc">Don de vêtements et articles d'hygiène.</span></span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="type" value="Métier / formation">
+            <span><strong>Métier</strong><span class="desc">Proposer une formation, un apprentissage ou une opportunité d'emploi.</span></span>
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer; justify-self:start;">Envoyer la demande</button>
+    </form>
+
+    <div id="support-pending" class="pending-box" style="display:none; max-width:640px;">
+      <div class="pending-dot"></div>
+      <div>
+        <strong>Demande en cours de traitement.</strong>
+        <p style="margin-top:4px; font-size:0.9rem;">L'équipe AGAPE FOR NATIONS a bien reçu votre demande et vous recontactera bientôt.</p>
+        <a id="support-wa-link" href="#" target="_blank" class="wa-btn" style="margin-top:16px;">Contacter directement sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <span class="eyebrow">Déjà envoyé une demande ?</span>
+    <h2 style="margin:10px 0 24px;">Suivre ma demande</h2>
+    <form id="track-support-form" style="max-width:480px; display:flex; gap:12px; align-items:flex-end;">
+      <div style="flex:1;">
+        <label for="track-numero">Votre numéro</label>
+        <input type="tel" id="track-numero" required>
+      </div>
+      <button type="submit" class="btn btn-ghost" style="border:1px solid var(--line); cursor:pointer; height:48px;">Vérifier</button>
+    </form>
+    <div id="track-support-results" style="margin-top:24px; max-width:640px;"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Agape for Nations</h4>
+        <p>ONG dédiée à l'accompagnement des enfants en situation de rue, pour qu'ils retrouvent un chemin de vie et de foi.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="visions.html">Nos visions</a>
+        <a href="missions.html">Nos missions</a>
+        <a href="actions.html">Nos actions</a>
+      </div>
+      <div>
+        <h4>Impliquez-vous</h4>
+        <a href="soutenir.html">Soutenir</a>
+        <a href="partenaires.html">Devenir partenaire</a>
+        <a href="contact.html">Nous contacter</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Cotonou, Bénin</p>
+        <p>contact@agapefornation.org</p>
+      </div>
+    </div>
+    <div class="path-rule"></div>
+    <div class="foot-bottom" style="margin-top:24px;">
+      <span>© 2026 Agape for Nations. Tous droits réservés.</span>
+      <span>Marcher avec Dieu, un enfant à la fois.</span> <a href="admin.html" style="opacity:0.4;">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
